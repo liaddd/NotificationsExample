@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "wowowow";
+            CharSequence name = "Test notification";
             String description = "channel one";
             int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         String notificationInput = notificationET.getText().toString();
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.ic_notification_overlay)
-                .setContentTitle("Woohoo you got a message!")
+                .setContentTitle("You got a new message!")
                 .setContentText(notificationInput)
                 .setDefaults(Notification.DEFAULT_SOUND)
                 .setSound(alarmSound)
